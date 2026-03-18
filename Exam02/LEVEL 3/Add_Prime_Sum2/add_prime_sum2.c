@@ -1,20 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_prime_sum.c                                    :+:      :+:    :+:   */
+/*   add_prime_sum2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/16 13:31:52 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/18 13:29:15 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/03/18 13:27:16 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/03/18 14:07:44 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putnbr(int	nb)
+{
+	char 	res;
+
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	res = (nb % 10) + '0';
+	write(1, &res, 1);
+}
+
+static int	ft_atoi(char *str)
+{
+	int res = 0, sign = 1;
+
+	while (*str == ' ' ||(*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-')
+		sign *= -1;
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + *str - '0';
+		str++;
+	}
+	return (res * sign);
+}
+
 int	is_prime(int nb)
 {
-	int	i = 0;
+	int	i = 2;
 	
 	if (nb <= 1)
 		return (0);
@@ -28,52 +56,22 @@ int	is_prime(int nb)
 	return (1);
 }
 
-static int	ft_atoi(char *str)
-{
-	int	nb = 0, i = 0, sign = 1;
 
-	while (str[i])
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	i = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = nb * 10 + str[i] - '0';
-		i++;
-	}
-	return (nb * sign);
-}
-void	ft_putnbr(int	nb)
+int	main(int argc, char **argv)
 {
-	char	c;
-
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	c = (nb % 10) + '0';
-	write (1, &c, 1);
-}
-int	main(int argc, char ** argv)
-{
-	
 	if (argc == 2)
 	{
-		int	sum = 0;
-		int	i = 0;
-		int	nb = ft_atoii(argv[1]);
-
-		while (i <= nb)
+		int	res = 0, nb = 0;
+		nb = ft_atoi(argv[1]);
+		while (nb > 0)
 		{
-			if (is_prime(i))
-				sum += i;
-			i++;
+			if (is_prime(nb--))
+				res = (res + 1);
 		}
-		ft_putnbr(sum);
+		ft_putnbr(res);
 	}
-	else 
-		write (1, "0", 1);
+	if (argc != 2)
+		ft_putnbr(0);
 	write (1, "\n", 1);
 	return (0);
 }

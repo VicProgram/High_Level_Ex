@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_bits.c                                      :+:      :+:    :+:   */
+/*   ft_rrange.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 16:05:13 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/18 12:28:05 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/03/18 13:44:59 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/03/18 14:07:43 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-/* void	print_bits(unsigned char octet)
+int     *ft_rrange(int start, int end)
 {
-	int	i = 8;
-	char	bit;
+	int	range = 0, i = 0;
+	int	*arr;
 
-	while (i > 0)
+	range = (end - start + 1);
+
+	arr = malloc (sizeof (int) * range);
+	if (!arr)
+		return (NULL);
+	while (range > 0)
 	{
-		bit = (octet >> i & 1) + '0';
-		write (1, &bit, 1);
-		i--;
+		arr[i] = end;
+		printf("%d", arr[i]);
+		i++;
+		end--;
+		range--;
 	}
-} */
+	return (arr);
+}
 
-
-void	print_bits(unsigned char octet)
+int	main(void)
 {
-	int				i = 8;
-	unsigned char	*bit;
-
-	while (i > 0)
-	{
-		bit = (octet >> i & 1) + '0';
-		write (1, &bit, 1);
-		i--;
-	}
+	ft_rrange(-1, 13);
+	return (0);
 }
