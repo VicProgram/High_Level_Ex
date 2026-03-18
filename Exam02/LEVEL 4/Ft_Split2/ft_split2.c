@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 16:41:17 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/18 17:10:58 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/18 17:35:46 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char    **ft_split(char *str)
 }
 
 
-/* // Prototipo de tu función
+// Prototipo de tu función
 char    **ft_split(char *str);
 
 int main(int argc, char **argv)
@@ -97,4 +97,4 @@ int main(int argc, char **argv)
     free(result); // Liberamos el array de punteros
     
     return (0);
-} */
+}
