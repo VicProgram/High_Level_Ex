@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 14:24:19 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/16 18:46:55 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/18 12:01:21 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main (int argc, char ** argv)
 	{
 		while (str[i] == ' ' || str[i] == '\t')
 			i++;
-		while (str[i])
+		while (str[i] != '\0')
 		{
 			if (str[i] != ' ' && str[i] != '\t')
 			{
