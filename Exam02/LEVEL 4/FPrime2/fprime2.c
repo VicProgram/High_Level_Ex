@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fprime.c                                           :+:      :+:    :+:   */
+/*   fprime2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 17:12:19 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/18 17:45:53 by vabad-ro         ###   ########.fr       */
+/*   Created: 2026/03/19 13:12:52 by vabad-ro          #+#    #+#             */
+/*   Updated: 2026/03/19 13:22:40 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	main(argc, char **argv)
 {
-	int	nb = 0, i = 1;
-
 	if (argc == 2)
 	{
-		nb = atoi(argv[1]);
+		int	nb = atoi(argv[1]);
+		int	i = 1;
+
 		if (nb == 1)
 			printf("1");
 		while (nb >= ++i)
