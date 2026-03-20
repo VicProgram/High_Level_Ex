@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 17:55:20 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/20 13:59:51 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/20 17:11:36 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	capita(char *str)
 {
 	int i = 0;
-
 	if (str[i] >= 'a' && str[i] <= 'z')
 		str[i] -= 32;
 	write(1, &str[i], 1);
@@ -31,7 +30,7 @@ void	capita(char *str)
 
 int	main(int argc, char **argv)
 {
-	int	i = 0;
+	int	i = 1;
 	if (argc < 2)
 		write(1, "\n", 1);
 	else
@@ -39,6 +38,7 @@ int	main(int argc, char **argv)
 			while (argv[i])
 			{
 				capita(argv[i]);
+				write (1, " ", 1);
 				i++;
 			}
 		}
