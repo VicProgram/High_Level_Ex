@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 13:31:52 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/18 13:29:15 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/19 18:43:47 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main(int argc, char ** argv)
 	{
 		int	sum = 0;
 		int	i = 0;
-		int	nb = ft_atoii(argv[1]);
+		int	nb = ft_atoi(argv[1]);
 
 		while (i <= nb)
 		{

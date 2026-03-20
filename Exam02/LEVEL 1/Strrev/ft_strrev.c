@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 17:30:13 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/19 17:33:39 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/19 17:45:28 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char    *ft_strrev(char *str)
 }
 
 // PENDIENTE MIRAR BIEN
-
 
 int	main()
 {
