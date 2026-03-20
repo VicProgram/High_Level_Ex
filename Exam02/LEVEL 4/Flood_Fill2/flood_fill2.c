@@ -6,12 +6,11 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 17:14:48 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/20 17:43:56 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/20 17:44:41 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "flood_fill2.h"
-
 
 void	fill(char **tab,t_point size, t_point cur, char target)
 {
