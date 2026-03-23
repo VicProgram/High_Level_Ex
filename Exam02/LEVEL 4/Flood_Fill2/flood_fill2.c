@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 17:14:48 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/20 17:44:41 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/20 18:04:18 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	fill(char **tab,t_point size, t_point cur, char target)
 
  void  flood_fill(char **tab, t_point size, t_point begin)
  {
-
 	fill(tab, size, begin, tab[begin.y][begin.x]);
  }
 
