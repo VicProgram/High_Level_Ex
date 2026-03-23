@@ -1,0 +1,9 @@
+Attempt 2;
+
+fizzbuzz
+
+do_op
+
+ft_atoi_base
+
+rostring
