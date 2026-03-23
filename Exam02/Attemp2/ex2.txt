@@ -6,4 +6,4 @@ do_op
 
 ft_atoi_base
 
-rostring
+rostring// list_foreach
