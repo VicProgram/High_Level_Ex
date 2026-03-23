@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 12:54:16 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/23 13:06:38 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/23 19:14:33 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_itoa(int nbr)
 		nb /= 10;
 		len++;
 	}
-
 	res = malloc(sizeof(char) * len +1);
 	if (!res)
 		return (NULL);
