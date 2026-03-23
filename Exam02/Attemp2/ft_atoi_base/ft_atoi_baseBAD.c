@@ -6,7 +6,7 @@
 /*   By: vabad-ro <vabad-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 13:39:53 by vabad-ro          #+#    #+#             */
-/*   Updated: 2026/03/23 14:02:42 by vabad-ro         ###   ########.fr       */
+/*   Updated: 2026/03/23 19:03:54 by vabad-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ int	ft_atoi_base(const char *str, int str_base)
 	}
 	while ((digit = get_digit(to_lower(*str), str_base)) >= 0)
 	{
-		res = res * str_base;
-		res = res +(digit * sign);
+		res = res * str_base +(digit * sign);
 		++str;
 	}	
 	return (res);

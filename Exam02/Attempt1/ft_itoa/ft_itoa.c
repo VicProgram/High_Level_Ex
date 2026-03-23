@@ -16,8 +16,7 @@
 char	*ft_itoa(int nbr)
 {
 	char 	*res;
-	int	len = 0;
-	int	nb = nbr;
+	int	len = 0, nb = nbr;
 
 	if (nb <= 0)
 		len++;
